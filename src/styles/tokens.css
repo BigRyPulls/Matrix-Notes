@@ -1,0 +1,56 @@
+:root {
+  /* Matrix-modern palette */
+  --bg-0: #070807;
+  --bg-1: #0a0a0a;
+  --bg-2: #111311;
+  --bg-3: #161a16;
+  --bg-elevated: rgba(22, 28, 22, 0.86);
+  --bg-glass: rgba(18, 22, 18, 0.72);
+  --bg-panel: #121512;
+  --bg-panel-2: #171b17;
+  --bg-input: #0d100d;
+
+  --border: rgba(57, 255, 136, 0.12);
+  --border-strong: rgba(57, 255, 136, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+
+  --text: #e8ebe8;
+  --text-2: #a8b0a8;
+  --text-3: #859185;
+  --text-inv: #061008;
+
+  --accent: #39ff88;
+  --accent-2: #22c55e;
+  --accent-dim: rgba(57, 255, 136, 0.14);
+  --accent-glow: rgba(57, 255, 136, 0.22);
+  --danger: #ff6b6b;
+  --danger-dim: rgba(255, 107, 107, 0.14);
+  --warning: #fbbf24;
+  --pr: #f0d78c;
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 24px rgba(57, 255, 136, 0.08);
+
+  --font: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+
+  --nav-h: 64px;
+  --header-h: 56px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  --touch: 48px;
+  --tap: 44px;
+  --max-w: 480px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 180ms;
+}

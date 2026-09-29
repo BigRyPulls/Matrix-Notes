@@ -1,0 +1,28 @@
+{
+  "name": "matrixnotes",
+  "private": true,
+  "version": "0.5.2",
+  "type": "module",
+  "description": "MatrixNotes — fast offline workout logger (PWA)",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "serve:lan": "node scripts/lan-server.mjs",
+    "phone": "npm run build && node scripts/lan-server.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "idb": "^8.0.3"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1",
+    "vite-plugin-pwa": "^1.2.0",
+    "workbox-window": "^7.4.0"
+  },
+  "engines": {
+    "node": "^22.12.0 || >=24.0.0"
+  }
+}

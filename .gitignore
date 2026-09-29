@@ -1,0 +1,49 @@
+# Local dependencies, caches, and editor files
+node_modules/
+.vite/
+.cache/
+coverage/
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets and machine-specific settings
+.env
+.env.*
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Personal data, backups, archives, and unrelated experiments
+backups/
+exports/
+private/
+temp/
+/Programs/
+bar-tracker/
+plotter/
+*.zip
+*.7z
+*.rar
+*.db
+*.sqlite
+*.sqlite3
+*.fitnotesdb
+*.matrixnotes.json
+matrixnotes-export-*.json
+FitNotes-*
+*.xlsx
+*.xls
+*.csv
+*.tsv
+*.bak
+__pycache__/
+*.pyc
+REFACTOR_PROMPT*.txt
+src/data/programs/deadlift-8rm-peak.ts
+
+# dist/ is intentionally tracked for ready-to-use access.

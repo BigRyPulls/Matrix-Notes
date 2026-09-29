@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-1);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: 100%;
+  overscroll-behavior: none;
+}
+
+/* iOS PWA standalone: fill the real visible area, not the Safari-toolbar viewport */
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+}
+
+#app {
+  height: 100dvh;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  position: relative;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(57, 255, 136, 0.05), transparent 60%),
+    var(--bg-1);
+  overflow: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+input,
+select,
+textarea {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--bg-input);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem;
+  outline: none;
+  width: 100%;
+  min-height: var(--tap);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 88px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--text);
+}
+
+/* Desktop widen slightly */
+@media (min-width: 900px) {
+  :root {
+    --max-w: 560px;
+  }
+
+  #app {
+    border-left: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow);
+  }
+}
+
+@media (min-width: 1100px) {
+  :root {
+    --max-w: 720px;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--text-inv);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transform: translateY(-100%);
+  transition: transform var(--dur) var(--ease);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none !important;
+}

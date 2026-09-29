@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+# Preserve production bytes used by service-worker cache revisions.
+dist/** -text
